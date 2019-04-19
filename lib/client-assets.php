@@ -572,12 +572,12 @@ add_filter( 'block_editor_settings', 'gutenberg_extend_block_editor_styles' );
 function gutenberg_extend_preload_paths( $preload_paths, $post ) {
 	$post_type_object = get_post_type_object( $post->post_type );
 	$rest_base        = ! empty( $post_type_object->rest_base ) ? $post_type_object->rest_base : $post_type_object->name;
+	$autosaves_path   = sprintf( '/wp/v2/%s/%d/autosaves?context=edit', $rest_base, $post->ID );
 
-	return array_merge(
-		$preload_paths,
-		array(
-			sprintf( '/wp/v2/%s/%d/autosaves?context=edit', $rest_base, $post->ID ),
-		)
-	);
+	if ( ! in_array( $autosaves_path, $preload_paths ) ) {
+		array_push( $preload_paths, $autosaves_path );
+	}
+
+	return $preload_paths;
 }
 add_filter( 'block_editor_preload_paths', 'gutenberg_extend_preload_paths', 10, 2 );
