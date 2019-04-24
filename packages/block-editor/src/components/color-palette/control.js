@@ -3,7 +3,6 @@
  */
 import { BaseControl, ColorIndicator } from '@wordpress/components';
 import { ifCondition, compose } from '@wordpress/compose';
-import { Fragment } from '@wordpress/element';
 import { sprintf, __ } from '@wordpress/i18n';
 
 /**
@@ -28,7 +27,7 @@ export function ColorPaletteControl( {
 	const ariaLabel = sprintf( colorIndicatorAriaLabel, label.toLowerCase(), colorName || value );
 
 	const labelElement = (
-		<Fragment>
+		<>
 			{ label }
 			{ value && (
 				<ColorIndicator
@@ -36,7 +35,7 @@ export function ColorPaletteControl( {
 					aria-label={ ariaLabel }
 				/>
 			) }
-		</Fragment>
+		</>
 	);
 
 	return (

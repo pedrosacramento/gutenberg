@@ -6,7 +6,6 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-import { Fragment } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 import {
 	InspectorControls,
@@ -25,7 +24,7 @@ function GroupEdit( { className, setBackgroundColor, backgroundColor } ) {
 	} );
 
 	return (
-		<Fragment>
+		<>
 			<InspectorControls>
 				<PanelColorSettings
 					title={ __( 'Color Settings' ) }
@@ -41,7 +40,7 @@ function GroupEdit( { className, setBackgroundColor, backgroundColor } ) {
 			<div className={ classes } style={ styles }>
 				<InnerBlocks />
 			</div>
-		</Fragment>
+		</>
 	);
 }
 
