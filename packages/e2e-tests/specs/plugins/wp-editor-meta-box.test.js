@@ -31,7 +31,7 @@ describe( 'WP Editor Meta Boxes', () => {
 
 		await page.reload();
 
-		await page.click( '#test_tinymce_id-html' );
+		await expect( page ).toClick( '#test_tinymce_id-html' );
 		const content = await page.$eval(
 			'#test_tinymce_id',
 			( textarea ) => textarea.value
