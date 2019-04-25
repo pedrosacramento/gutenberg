@@ -4,8 +4,8 @@
 const getSymbolTagsByName = require( './get-symbol-tags-by-name' );
 
 /**
- * Returns true if, given a symbol object, the symbol is considered private and
- * should be omitted from formatted output, or false otherwise.
+ * Returns true if, given a symbol object, it contains a @private tag, or false
+ * otherwise.
  *
  * @param {Object} symbol Symbol object.
  *
