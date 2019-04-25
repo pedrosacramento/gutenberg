@@ -32,7 +32,7 @@ These either happen in private API, aren't relevant, or are pending of decission
 - [ ] `@constant` packages/editor/src/hooks/align.js
 - [ ] `@constructor` packages/edit-post/src/hooks/components/media-upload/index.js
 - [ ] `@inheritdoc` packages/edit-post/src/components/meta-boxes/meta-boxes-area/index.js
-- [ ] `@private` packages/editor/src/components/rich-text/index.js
+- [x] `@private` packages/editor/src/components/rich-text/index.js
 - [ ] `@property` babel-plugin-import-jsx-pragma
 - [ ] `@since` packages/block-serialization-default-parser/src/index.js
 - [ ] `@throws` packages/blocks/src/api/node.js

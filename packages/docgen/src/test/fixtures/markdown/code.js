@@ -1,3 +1,16 @@
+let _lastSum;
+
+/**
+ * Returns the result of the last call to `sum`.
+ *
+ * @private
+ *
+ * @return {number} The result of the last call to sum.
+ */
+export function _getLastSum() {
+	return _lastSum;
+}
+
 /**
  * A function that adds two parameters.
  *
@@ -20,5 +33,5 @@
  * @return {number} The result of adding the two params.
  */
 export const sum = ( firstParam, secondParam ) => {
-	return firstParam + secondParam;
+	return _lastSum = firstParam + secondParam;
 };
